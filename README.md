@@ -2,8 +2,7 @@
 
 CakePHP Email Component for Amazon Simple Email Service (Amazon SES)
 
-Based on original class from:
-http://bakery.cakephp.org/articles/dankroad/2011/01/30/integrate_amazon_simple_email_service_ses_into_existing_application
+Based on Lucas Ferreira's (Burn web.studio - http://www.burnweb.com.br/) implementation of the original class from: http://bakery.cakephp.org/articles/dankroad/2011/01/30/integrate_amazon_simple_email_service_ses_into_existing_application
 
 
 ## Requisites:
@@ -19,10 +18,9 @@ Load EmailService in your controller components
 
 	var $components = array('EmailService');
 
-
 In your action choose aws_ses as delivery option
 
 	$this->EmailService->delivery = 'aws_ses'; // or 'aws_ses_raw' if you want complex e-mail with attachments
 
 
-by @lucasferreira
+by @lucasferreira (tweeked by @viorel_sfetea)
