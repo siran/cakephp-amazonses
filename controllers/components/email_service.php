@@ -62,10 +62,10 @@ class EmailServiceComponent extends EmailComponent {
 		
 		$header 	= implode("\r\n", $this->__header);
 		$message 	= implode("\r\n", $this->__message);
-		$data 		= base64_encode($header . "\r\n\r\n" . $message . "\r\n\r\n\r\n.");
-		
-		$options = array_merge($this->ses_options, array( 
-			'Source' => $this->from 
+		$data 		= base64_encode($header . "\r\n\r\n" . $message . "\r\n\r\n\r\n");
+
+		$options = array_merge($this->ses_options, array(
+			'Source' => $this->from
 		));
 		
 		$this->response = $ses->send_raw_email(array('Data' => $data), $options); 
